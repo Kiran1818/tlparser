@@ -4,7 +4,6 @@ import base64
 import streamlit as st
 
 def getTimeLog(line):
-	filename = sys.argv[1]
 
 	report = []
 	timeList = []
@@ -91,10 +90,10 @@ def getTimeLog(line):
 				flag = True
 		count += 1
 
-	print(totalDiff)
-	print("Total Period: " + str(totalDiff // 60) + "h " + str(totalDiff % 60) + "m")
+	st.write(totalDiff)
+	st.write("Total Period: " + str(totalDiff // 60) + "h " + str(totalDiff % 60) + "m")
 	for temp in report:
-		print(str(temp) + " line has some thing error")
+		st.write(str(temp) + " line has some thing error")
 
 if __name__ == "__main__":
 		# read file
